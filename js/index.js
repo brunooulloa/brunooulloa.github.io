@@ -3,7 +3,7 @@ let flashaste = () => {
 }
 
 let redirect = (fileName) => {
-    if (fileName != 'index' && window.location.pathname.split('/').pop() != 'index.html') {
+    if (fileName != 'index' && window.location.pathname.split('/').pop() == 'index.html') {
         window.open(`html/${fileName}.htm`,'_self');
     } else if (fileName != 'index') {
         window.open(`${fileName}.htm`,'_self');
