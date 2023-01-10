@@ -37,8 +37,7 @@ let nosotros = () => {
             break;
         
         default:
-            alert('incorrect password');
-            setTimeout(() => { alert('incorrect password') }, 2000);
+            setTimeout(() => { alert('incorrect password'); }, 2000);
             break;
     }
 }
