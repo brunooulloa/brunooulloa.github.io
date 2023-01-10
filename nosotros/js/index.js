@@ -23,3 +23,17 @@ let mal2 = () => {
 let mal3 = () => {
     document.getElementById('mal3').innerHTML = 'perdon si no fue lo que esperabas este regalo, pero enserio me esforce, eso deberia contar de algo :('
 }
+
+let nosotros = () => {
+    let code = prompt('password: ')
+    if (code === null) {
+        return;
+    }
+
+    switch (code) {
+        case '040922rb':
+            window.location.replace('./nosotros/index.html')
+        case 'exit':
+            break;
+    }
+}
