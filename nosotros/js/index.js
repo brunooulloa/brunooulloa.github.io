@@ -35,5 +35,10 @@ let nosotros = () => {
             window.location.replace('./nosotros/index.html')
         case 'exit':
             break;
+        
+        default:
+            alert('incorrect password');
+            setTimeout(() => { alert('incorrect password') }, 2000);
+            break;
     }
 }
