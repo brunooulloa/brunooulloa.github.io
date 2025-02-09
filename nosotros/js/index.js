@@ -2,9 +2,23 @@ let flashaste = () => {
     document.getElementById('flashaste').innerHTML = 'que flasheas? nadie es el verdadero amor de mi vida ademas de vos'
 }
 
+let noteamo = () => {
+    document.getElementById('noteamo').innerHTML = 'asumo q pusiste q no xq no me amas, sino q me amas muchisimo mas de lo q podria imaginar no?'
+}
+
 let redirect = (fileName) => {
     if (fileName != 'index' && window.location.pathname.split('/').pop() == 'index.html') {
         window.open(`./html/${fileName}.htm`,'_self');
+    } else if (fileName != 'index') {
+        window.open(`./${fileName}.htm`,'_self');
+    } else {
+        window.open('../../index.html','_self');
+    }
+}
+
+let red2 = (fileName) => {
+    if (fileName != 'index' && window.location.pathname.split('/').pop() == 'index.html') {
+        window.open(`./nosotros/html/${fileName}.htm`,'_self');
     } else if (fileName != 'index') {
         window.open(`./${fileName}.htm`,'_self');
     } else {
@@ -13,15 +27,15 @@ let redirect = (fileName) => {
 }
 
 let mal1 = () => {
-    document.getElementById('mal1').innerHTML = 'se que te gusta mi sonrisa pero esta es la respuesta incorrecta :/'
+    document.getElementById('mal1').innerHTML = 'lo entiendo y se q duele mucho cambiar y q la otra persona no pueda hacer lo mismo por vos, pero no te preocupes, no te voy a dejar sola, siempre voy a estar a tu lado, te amo'
 }
 
 let mal2 = () => {
-    document.getElementById('mal2').innerHTML = 'cuando nos conocimos fue un momento magico no solo para mi sino para vos, pero desafortunadamente no me parece el mejor momento de nuestra relacion, nada se compara al amor que te tuve en cuanto me desperte y vi que estabas al lado mio, me causaste seguridad y una gran felicidad'
+    document.getElementById('mal2').innerHTML = 'tenes razon y lo estoy trabajando, no es facil y no es algo q se pueda cambiar de un dia para el otro, pero te prometo q lo voy a lograr, x vos y x mi'
 }
 
 let mal3 = () => {
-    document.getElementById('mal3').innerHTML = 'perdon si no fue lo que esperabas este regalo, pero enserio me esforce, eso deberia contar de algo :('
+    document.getElementById('mal3').innerHTML = 'perdon si no fue lo que esperabas este regalo, pero enserio me esforce, y quiero mostrarte q enserio te amo, exactamente como el dia en q te hice esto x primera vez, y no se va a ir ese amor nunca :('
 }
 
 let nosotros = () => {
