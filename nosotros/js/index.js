@@ -18,7 +18,7 @@ let redirect = (fileName) => {
 
 let red2 = (fileName) => {
     if (fileName != 'index' && window.location.pathname.split('/').pop() == 'index.html') {
-        window.open(`nosotros/html/${fileName}.htm`,'_self');
+        window.open(`./nosotros/html/${fileName}.htm`,'_self');
     } else if (fileName != 'index') {
         window.open(`./${fileName}.htm`,'_self');
     } else {
