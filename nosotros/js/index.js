@@ -10,13 +10,13 @@ let redirect = (fileName) => {
     if (fileName != 'index' && window.location.pathname.split('/').pop() == 'index.html') {
         window.open(`html/${fileName}.htm`,'_self');
     } else if (fileName != 'index') {
-        window.open(`./${fileName}.htm`,'_self');
+        window.open(`${fileName}.htm`,'_self');
     } else {
         window.open('../../index.html','_self');
     }
 }
 
-let red2 = (fileName) => {
+const red2 = (fileName) => {
     if (fileName != 'index' && window.location.pathname.split('/').pop() == 'index.html') {
         window.open(`nosotros/html/${fileName}.htm`,'_self');
     } else if (fileName != 'index') {
