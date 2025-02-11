@@ -8,7 +8,7 @@ let noteamo = () => {
 
 let redirect = (fileName) => {
     if (fileName != 'index' && window.location.pathname.split('/').pop() == 'index.html') {
-        window.open(`/nosotros/html/${fileName}.htm`,'_self');
+        window.open(`https://brunooulloa.github.io/nosotros/html/${fileName}.htm`,'_self');
     } else if (fileName != 'index') {
         window.open(`${fileName}.htm`,'_self');
     } else {
@@ -20,7 +20,7 @@ const red2 = (fileName) => {
     if (fileName === 'index') {
         window.open('../../index.html', '_self');
     } else if (window.location.pathname.split('/').pop().includes('index')) {
-        window.open(`/nosotros/html/${fileName}.htm`, '_self');
+        window.open(`https://brunooulloa.github.io/nosotros/html/${fileName}.htm`, '_self');
     } else {
         window.open(`${fileName}.htm`, '_self');
     }
