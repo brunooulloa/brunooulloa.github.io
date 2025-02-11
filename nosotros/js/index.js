@@ -8,7 +8,7 @@ let noteamo = () => {
 
 let redirect = (fileName) => {
     if (fileName != 'index' && window.location.pathname.split('/').pop() == 'index.html') {
-        window.open(`html/${fileName}.htm`,'_self');
+        window.open(`/nosotros/html/${fileName}.htm`,'_self');
     } else if (fileName != 'index') {
         window.open(`${fileName}.htm`,'_self');
     } else {
@@ -18,9 +18,9 @@ let redirect = (fileName) => {
 
 const red2 = (fileName) => {
     if (fileName === 'index') {
-        window.open('../index.html', '_self');
-    } else if (window.location.pathname.split('/').pop() === 'index.html') {
-        window.open(`nosotros/html/${fileName}.htm`, '_self');
+        window.open('../../index.html', '_self');
+    } else if (window.location.pathname.split('/').pop().includes('index')) {
+        window.open(`/nosotros/html/${fileName}.htm`, '_self');
     } else {
         window.open(`${fileName}.htm`, '_self');
     }
