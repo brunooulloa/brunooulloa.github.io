@@ -23,7 +23,7 @@ const red2 = (fileName) => {
     } else if (window.location.pathname.split('/').pop() === 'index.html') {
         window.open(`https://brunooulloa.github.io/nosotros/html/${fileName}.htm`, '_self');
     } else {
-        window.open(`${fileName}.htm`, '_self');
+        window.open(`nosotros/html/${fileName}.htm`, '_self');
     }
 }
 
