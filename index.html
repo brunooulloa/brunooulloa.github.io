@@ -1,20 +1,1016 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="./nosotros/css/index.css">
-    <title>te amo amor de mi vidaaa ❤️</title>
-    <p>
-        <h3>Hola mi amor, queria retomar esto q habia empezado en un momento q no me di cuenta lo mucho q valia en su momento, pero ahora entiendo q es demostrarte q estoy dispuesto a poner esfuerzo y q veas lo enamorado q estoy</h3>
-    </p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff6b9f" />
+  <title>Para Ro — con todo mi amor ❤️</title>
+
+  <style>
+    :root {
+      --bg-1: #fff3f7;
+      --bg-2: #ffe5ee;
+      --bg-3: #f8d7ff;
+      --text: #2e1723;
+      --muted: #765768;
+      --card: rgba(255, 255, 255, 0.72);
+      --card-strong: rgba(255, 255, 255, 0.92);
+      --rose: #ff4f8b;
+      --rose-dark: #c92d67;
+      --violet: #7c4dff;
+      --gold: #ffd166;
+      --shadow: 0 24px 70px rgba(155, 35, 87, 0.18);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255, 209, 102, 0.45), transparent 28%),
+        radial-gradient(circle at 90% 0%, rgba(124, 77, 255, 0.22), transparent 34%),
+        radial-gradient(circle at 45% 95%, rgba(255, 79, 139, 0.22), transparent 34%),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2) 45%, var(--bg-3));
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.45), transparent 75%);
+      z-index: -2;
+    }
+
+    .blob {
+      position: fixed;
+      width: 360px;
+      height: 360px;
+      border-radius: 999px;
+      filter: blur(26px);
+      opacity: 0.34;
+      z-index: -1;
+      animation: floatBlob 13s ease-in-out infinite alternate;
+    }
+
+    .blob.one {
+      left: -90px;
+      top: 180px;
+      background: #ff8ab3;
+    }
+
+    .blob.two {
+      right: -110px;
+      top: 80px;
+      background: #b39cff;
+      animation-delay: -4s;
+    }
+
+    .blob.three {
+      left: 40%;
+      bottom: -170px;
+      background: #ffd166;
+      animation-delay: -7s;
+    }
+
+    @keyframes floatBlob {
+      from { transform: translate3d(0, 0, 0) scale(1); }
+      to { transform: translate3d(38px, -42px, 0) scale(1.08); }
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      position: sticky;
+      top: 16px;
+      z-index: 20;
+      margin-bottom: 56px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,0.58);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.58);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 12px 35px rgba(155, 35, 87, 0.12);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: white;
+      background: linear-gradient(135deg, var(--rose), var(--violet));
+      box-shadow: 0 10px 22px rgba(255, 79, 139, 0.28);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 10px 12px;
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--rose-dark);
+      background: rgba(255, 79, 139, 0.08);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 32px;
+      min-height: calc(100vh - 140px);
+    }
+
+    .hero-copy {
+      padding: 18px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 9px 13px;
+      color: var(--rose-dark);
+      font-weight: 800;
+      font-size: 0.84rem;
+      border: 1px solid rgba(255, 79, 139, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.58);
+      box-shadow: 0 10px 30px rgba(255, 79, 139, 0.10);
+    }
+
+    h1 {
+      max-width: 780px;
+      font-size: clamp(3.15rem, 9vw, 7.2rem);
+      line-height: 0.9;
+      letter-spacing: -0.08em;
+      margin-bottom: 22px;
+    }
+
+    .gradient-text {
+      color: transparent;
+      background: linear-gradient(110deg, #ff2f7f, #7c4dff 55%, #ff9f1c);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .lead {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.32rem);
+      line-height: 1.72;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      font: inherit;
+      font-weight: 900;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--rose), var(--violet));
+      box-shadow: 0 18px 36px rgba(255, 79, 139, 0.26);
+    }
+
+    .button.secondary {
+      color: var(--rose-dark);
+      border: 1px solid rgba(255, 79, 139, 0.18);
+      background: rgba(255, 255, 255, 0.68);
+      box-shadow: 0 14px 28px rgba(155, 35, 87, 0.10);
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,0.72);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(145deg, rgba(255,255,255,0.78), rgba(255,255,255,0.44));
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -70px;
+      top: -80px;
+      background: radial-gradient(circle, rgba(255,79,139,0.24), transparent 66%);
+    }
+
+    .love-note {
+      position: relative;
+      display: grid;
+      gap: 18px;
+      min-height: 520px;
+      padding: clamp(22px, 4vw, 38px);
+      border-radius: 28px;
+      background:
+        linear-gradient(rgba(255,255,255,0.62), rgba(255,255,255,0.86)),
+        repeating-linear-gradient(0deg, transparent 0 35px, rgba(255, 79, 139, 0.09) 36px 37px);
+    }
+
+    .stamp {
+      justify-self: end;
+      display: grid;
+      place-items: center;
+      width: 112px;
+      height: 112px;
+      border-radius: 31% 69% 45% 55% / 57% 35% 65% 43%;
+      color: #fff;
+      font-weight: 950;
+      text-align: center;
+      transform: rotate(8deg);
+      background: linear-gradient(135deg, #ff4f8b, #ff9f1c);
+      box-shadow: 0 18px 42px rgba(255, 79, 139, 0.25);
+      animation: pulse 2.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: rotate(8deg) scale(1); }
+      50% { transform: rotate(8deg) scale(1.04); }
+    }
+
+    .love-note h2 {
+      max-width: 420px;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+
+    .love-note p {
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.75;
+    }
+
+    .signature {
+      align-self: end;
+      font-size: 1.35rem;
+      font-weight: 950;
+      color: var(--rose-dark);
+    }
+
+    section {
+      margin-top: 28px;
+      scroll-margin-top: 110px;
+    }
+
+    .section-card {
+      border: 1px solid rgba(255,255,255,0.68);
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,0.58);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .section-inner {
+      padding: clamp(24px, 5vw, 48px);
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 14px;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 0.96;
+      letter-spacing: -0.065em;
+    }
+
+    .section-subtitle {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .promise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .promise {
+      padding: 22px;
+      border: 1px solid rgba(255, 79, 139, 0.13);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.58);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .promise:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(155, 35, 87, 0.13);
+    }
+
+    .promise-icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 16px;
+      border-radius: 16px;
+      background: rgba(255, 79, 139, 0.11);
+      font-size: 1.35rem;
+    }
+
+    .promise h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+      letter-spacing: -0.03em;
+    }
+
+    .promise p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .question-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+
+    .question-box {
+      padding: clamp(22px, 4vw, 34px);
+      border-radius: var(--radius-lg);
+      background: var(--card-strong);
+    }
+
+    .question-box h3 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+      margin-bottom: 12px;
+    }
+
+    .question-box p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .answer-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .soft-response {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 16px;
+      color: var(--rose-dark);
+      font-weight: 800;
+      line-height: 1.55;
+      border-radius: 18px;
+      background: rgba(255, 79, 139, 0.08);
+    }
+
+    .soft-response.show {
+      display: block;
+      animation: fadeUp 0.35s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .playlist {
+      position: relative;
+      min-height: 100%;
+      padding: clamp(22px, 4vw, 34px);
+      border-radius: var(--radius-lg);
+      color: white;
+      background:
+        linear-gradient(135deg, rgba(46, 23, 35, 0.92), rgba(124, 77, 255, 0.78)),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.2), transparent 35%);
+      overflow: hidden;
+    }
+
+    .playlist::after {
+      content: "♪";
+      position: absolute;
+      right: 18px;
+      bottom: -44px;
+      font-size: 13rem;
+      font-weight: 900;
+      opacity: 0.08;
+    }
+
+    .playlist h3 {
+      font-size: 1.5rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .playlist p {
+      max-width: 410px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 18px;
+      padding: 18px;
+      border: 1px solid rgba(255, 79, 139, 0.12);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.56);
+    }
+
+    .timeline-date {
+      color: var(--rose-dark);
+      font-weight: 950;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 6px;
+      letter-spacing: -0.03em;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .letter {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .letter-aside {
+      position: sticky;
+      top: 112px;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(255,79,139,0.12), rgba(124,77,255,0.10));
+    }
+
+    .letter-aside h3 {
+      font-size: 1.55rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .letter-aside p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .letter-paper {
+      padding: clamp(24px, 5vw, 42px);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.92)),
+        repeating-linear-gradient(0deg, transparent 0 32px, rgba(255, 79, 139, 0.08) 33px 34px);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.64);
+    }
+
+    .letter-paper p {
+      color: #533346;
+      font-size: 1.06rem;
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      grid-template-rows: repeat(2, 230px);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .photo-card {
+      position: relative;
+      display: grid;
+      place-items: end start;
+      min-height: 200px;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(255, 79, 139, 0.16), rgba(124, 77, 255, 0.14)),
+        rgba(255,255,255,0.62);
+      border: 1px solid rgba(255,255,255,0.72);
+    }
+
+    .photo-card:first-child {
+      grid-row: span 2;
+    }
+
+    .photo-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 18% 18%, rgba(255,255,255,0.86), transparent 28%);
+      opacity: 0.9;
+    }
+
+    .photo-card span {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      padding: 9px 12px;
+      color: var(--rose-dark);
+      font-size: 0.84rem;
+      font-weight: 900;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.76);
+      backdrop-filter: blur(10px);
+    }
+
+    .final {
+      text-align: center;
+      padding: clamp(32px, 7vw, 64px);
+    }
+
+    .final h2 {
+      margin-bottom: 16px;
+      font-size: clamp(2.4rem, 7vw, 5.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.08em;
+    }
+
+    .final p {
+      max-width: 760px;
+      margin: 0 auto 26px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+
+    .footer {
+      padding: 28px 0 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .heart {
+      position: fixed;
+      pointer-events: none;
+      z-index: 100;
+      animation: floatHeart 1.25s ease-out forwards;
+      will-change: transform, opacity;
+    }
+
+    @keyframes floatHeart {
+      from { opacity: 1; transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+      to { opacity: 0; transform: translate3d(var(--x), -120px, 0) scale(1.9) rotate(18deg); }
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 22px;
+      z-index: 200;
+      width: min(520px, calc(100% - 32px));
+      padding: 16px 18px;
+      color: white;
+      font-weight: 850;
+      text-align: center;
+      line-height: 1.45;
+      border-radius: 22px;
+      background: rgba(46, 23, 35, 0.88);
+      backdrop-filter: blur(18px);
+      transform: translate(-50%, 18px);
+      opacity: 0;
+      transition: 0.28s ease;
+      box-shadow: 0 18px 45px rgba(46, 23, 35, 0.22);
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .question-card,
+      .letter {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .promise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .letter-aside {
+        position: relative;
+        top: 0;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .photo-card:first-child {
+        grid-row: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 22px, 1120px);
+        padding-top: 14px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        border-radius: 22px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 18vw, 5rem);
+      }
+
+      .hero-card {
+        padding: 12px;
+      }
+
+      .love-note {
+        min-height: 430px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <p>
-        <span>Primero q todo, me seguis amando?</span>
-        <p></p>
-        <button id="si" class="button-85" onclick="red2('bien')">Te amo con todo mi corazon 😍</button>
-        <button id="no" class="button-85" onclick="noteamo()">No te amo mas 💔</button>
-    </p>
-    <p id="noteamo"></p>
-    <script src="./nosotros/js/index.js"></script>
+  <div class="blob one"></div>
+  <div class="blob two"></div>
+  <div class="blob three"></div>
+
+  <main class="page">
+    <nav class="nav" aria-label="Navegación principal">
+      <div class="brand">
+        <span class="brand-mark">❤</span>
+        <span>Para Ro</span>
+      </div>
+      <div class="nav-links">
+        <a href="#promesas">Promesas</a>
+        <a href="#historia">Historia</a>
+        <a href="#carta">Carta</a>
+        <a href="#fotos">Fotos</a>
+      </div>
+    </nav>
+
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow">Hecho por mí, para vos ✨</div>
+        <h1>Hola, <span class="gradient-text">mi amor.</span></h1>
+        <p class="lead">
+          Quería retomar este regalo que empecé hace tiempo. En ese momento no entendía del todo lo mucho que valía demostrar con hechos, con detalles y con esfuerzo. Hoy sí: quiero que veas que te elijo, que te amo, y que estoy dispuesto a cuidar lo nuestro de verdad.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#pregunta">Empezar el recorrido ❤️</a>
+          <button class="button secondary" type="button" data-love-burst>Mandarte amor ahora</button>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Nota de amor">
+        <div class="love-note">
+          <div class="stamp">te amo<br>mucho</div>
+          <h2>Esto no es solo una página.</h2>
+          <p>
+            Es una forma chiquita de decirte algo enorme: sos mi persona, mi casa, mi calma y mi parte favorita de todos los días.
+          </p>
+          <p>
+            No quiero que esto sea perfecto; quiero que sea sincero. Porque lo que siento por vos no entra en un botón, ni en una carta, ni en una web. Pero igual quería intentarlo.
+          </p>
+          <div class="signature">— tu osito</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="pregunta" class="section-card">
+      <div class="section-inner">
+        <h2 class="section-title">Primero que todo...</h2>
+        <p class="section-subtitle">Antes de seguir, necesitaba hacerte la pregunta más importante de toda esta página.</p>
+
+        <div class="question-card">
+          <div class="question-box">
+            <h3>¿Me seguís amando?</h3>
+            <p>Yo espero que sí, porque yo te amo con todo mi corazón. Y más que decirlo, quiero demostrarlo mejor.</p>
+            <div class="answer-row">
+              <button class="button primary" type="button" id="yesButton">Sí, te amo con todo mi corazón</button>
+              <button class="button secondary" type="button" id="maybeButton">Necesito pensarlo</button>
+            </div>
+            <div class="soft-response" id="softResponse"></div>
+          </div>
+
+          <div class="playlist">
+            <h3>Modo amor activado</h3>
+            <p>
+              Si esta página tuviera sonido, sonaría como una canción tranquila de esas que te abrazan y te hacen acordar por qué vale la pena elegirnos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="promesas" class="section-card">
+      <div class="section-inner">
+        <h2 class="section-title">Lo que quiero cuidar mejor</h2>
+        <p class="section-subtitle">
+          No quiero que esto quede solamente lindo. Quiero que también diga algo real: estoy aprendiendo, estoy presente y quiero construir una versión más sana de nosotros.
+        </p>
+
+        <div class="promise-grid">
+          <article class="promise">
+            <div class="promise-icon">🫶</div>
+            <h3>Demostrar más</h3>
+            <p>No esperar a que duela para acordarme de decirte lo importante que sos para mí.</p>
+          </article>
+          <article class="promise">
+            <div class="promise-icon">🌙</div>
+            <h3>Escucharte mejor</h3>
+            <p>Entender lo que sentís sin ponerme a la defensiva, y acompañarte con más amor.</p>
+          </article>
+          <article class="promise">
+            <div class="promise-icon">🌷</div>
+            <h3>Elegirnos distinto</h3>
+            <p>Dejar atrás lo que nos hizo mal y cuidar esta nueva etapa con acciones, paciencia y ternura.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia" class="section-card">
+      <div class="section-inner">
+        <h2 class="section-title">Nuestro recorrido</h2>
+        <p class="section-subtitle">
+          No todo fue fácil, pero lo nuestro siempre tuvo algo enorme: ganas de volver a encontrarnos, de aprender y de seguir eligiéndonos.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Antes</div>
+            <div>
+              <h3>Cuando empezó todo</h3>
+              <p>Ese momento en el que todavía no sabíamos todo lo que íbamos a vivir, pero ya había algo distinto entre nosotros.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Estos 3 años</div>
+            <div>
+              <h3>Lo que construimos</h3>
+              <p>Risas, discusiones, abrazos, aprendizajes, días hermosos y días difíciles. Todo eso también es parte de nuestra historia.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Ahora</div>
+            <div>
+              <h3>Una nueva etapa</h3>
+              <p>Quiero que esta vez se sienta más cuidada, más madura y más llena de amor real. No perfecto: real.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="carta" class="section-card">
+      <div class="section-inner letter">
+        <aside class="letter-aside">
+          <h3>Cartita para vos</h3>
+          <p>La parte más importante de todo esto. Sin vueltas, sin orgullo, sin querer ganar nada: solo amor y ganas de hacer las cosas bien.</p>
+        </aside>
+
+        <article class="letter-paper">
+          <p>Amor, te escribo esto porque sé que hace tiempo no estuve siendo tan demostrativo como merecías. Y no quiero justificarlo ni hacerlo chiquito: quiero reconocerlo.</p>
+          <p>Sos el amor de mi vida. No quiero perderte por no haber sabido cuidar lo que más amo. Me importa lo que sentís, me importa lo que necesitás, y me importa que puedas verme intentando de verdad.</p>
+          <p>Gracias por estos años conmigo, por haber sido mi luz incluso en momentos donde yo no supe estar a la altura. Quiero que esta nueva etapa tenga menos promesas vacías y más detalles reales, menos orgullo y más escucha, menos distancia y más amor.</p>
+          <p>Te amo con todo mi corazón. Y si me lo permitís, quiero seguir aprendiendo a amarte mejor, todos los días.</p>
+          <p class="signature">Con muchísimo amor, tu osito.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fotos" class="section-card">
+      <div class="section-inner">
+        <h2 class="section-title">Foto dump de nosotros</h2>
+        <p class="section-subtitle">
+          Acá podés poner sus fotos favoritas. Reemplazá estos bloques por imágenes cuando quieras: abajo te dejo el ejemplo exacto en el comentario del código.
+        </p>
+
+        <div class="gallery-grid">
+          <div class="photo-card"><span>foto favorita juntos</span></div>
+          <div class="photo-card"><span>un día que no olvidaríamos</span></div>
+          <div class="photo-card"><span>nuestra cara de amor</span></div>
+        </div>
+
+        <!--
+          Para usar fotos reales, reemplazá cada .photo-card por algo así:
+
+          <div class="photo-card" style="background-image: linear-gradient(to top, rgba(46,23,35,.55), transparent), url('./nosotros/img/foto1.jpg'); background-size: cover; background-position: center;">
+            <span>foto favorita juntos</span>
+          </div>
+
+          Y subí tus fotos a una carpeta tipo: /nosotros/img/foto1.jpg
+        -->
+      </div>
+    </section>
+
+    <section class="section-card">
+      <div class="final">
+        <h2>¿Seguimos eligiéndonos?</h2>
+        <p>
+          Yo sí. Te elijo en lo lindo, en lo difícil, en lo que estamos sanando y en todo lo que todavía nos falta construir.
+        </p>
+        <button class="button primary" type="button" id="finalButton">Sí, sigamos eligiéndonos ❤️</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Hecho con amor, paciencia y ganas de hacerlo mejor. ❤️
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const yesButton = document.querySelector('#yesButton');
+    const maybeButton = document.querySelector('#maybeButton');
+    const finalButton = document.querySelector('#finalButton');
+    const softResponse = document.querySelector('#softResponse');
+    const toast = document.querySelector('#toast');
+    const loveBurstButtons = document.querySelectorAll('[data-love-burst]');
+
+    const sweetMessages = [
+      'Yo también te amo, más de lo que esta página puede explicar.',
+      'Gracias por quedarte. Prometo cuidar mejor lo nuestro.',
+      'Sos mi lugar favorito en el mundo, Ro.',
+      'Si esta página te sacó una sonrisa, ya valió la pena.'
+    ];
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      window.clearTimeout(showToast.timeout);
+      showToast.timeout = window.setTimeout(() => toast.classList.remove('show'), 3200);
+    }
+
+    function createHeart(x, y) {
+      const heart = document.createElement('span');
+      heart.className = 'heart';
+      heart.textContent = Math.random() > 0.5 ? '❤️' : '💗';
+      heart.style.left = `${x}px`;
+      heart.style.top = `${y}px`;
+      heart.style.setProperty('--x', `${Math.random() * 120 - 60}px`);
+      heart.style.fontSize = `${Math.random() * 18 + 18}px`;
+      document.body.appendChild(heart);
+      heart.addEventListener('animationend', () => heart.remove());
+    }
+
+    function burstHearts(amount = 24) {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight * 0.62;
+      for (let i = 0; i < amount; i++) {
+        window.setTimeout(() => {
+          createHeart(centerX + Math.random() * 260 - 130, centerY + Math.random() * 80 - 40);
+        }, i * 28);
+      }
+    }
+
+    yesButton.addEventListener('click', () => {
+      softResponse.textContent = 'Yo también, mi amor. Gracias por seguir eligiéndome. Ahora sigo mostrándote por qué hice esto para vos.';
+      softResponse.classList.add('show');
+      burstHearts(30);
+      showToast('Respuesta guardada en mi corazón ❤️');
+    });
+
+    maybeButton.addEventListener('click', () => {
+      const message = sweetMessages[Math.floor(Math.random() * sweetMessages.length)];
+      softResponse.textContent = message;
+      softResponse.classList.add('show');
+      maybeButton.animate([
+        { transform: 'translateX(0)' },
+        { transform: 'translateX(-8px)' },
+        { transform: 'translateX(8px)' },
+        { transform: 'translateX(0)' }
+      ], { duration: 300, easing: 'ease-out' });
+    });
+
+    finalButton.addEventListener('click', () => {
+      burstHearts(46);
+      showToast('Entonces vamos por esa nueva etapa, mi amor. Te amo muchísimo.');
+    });
+
+    loveBurstButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        burstHearts(26);
+        showToast('Te amo, Ro. Muchísimo.');
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (event.target.closest('button, a')) return;
+      if (Math.random() > 0.72) createHeart(event.clientX, event.clientY);
+    });
+  </script>
 </body>
 </html>
+\
